@@ -11,7 +11,7 @@ const CreateThirukkural = () => {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("https://thirukkural-api-hbta.onrender.com/createthirukkural", { KuralEn, Kural, KuralVilakkam })
+        axios.post("https://thirukkural-api-dycp.onrender.com/createthirukkural", { KuralEn, Kural, KuralVilakkam })
         .then(result => {
             console.log(result);
             navigate('/')

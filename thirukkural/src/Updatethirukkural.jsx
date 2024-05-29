@@ -11,7 +11,7 @@ const UpdateThirukkural = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('https://thirukkural-api-hbta.onrender.com/getThirukkural/'+id)
+        axios.get('https://thirukkural-api-dycp.onrender.com/getThirukkural/'+id)
         .then(results => {
             console.log(results)
             setKuralEn(results.data.KuralEn)
@@ -22,7 +22,7 @@ const UpdateThirukkural = () => {
 
     const Update = (e) => {
         e.preventDefault();
-        axios.put("https://thirukkural-api-hbta.onrender.com/updatethirukkural/"+id, { KuralEn, Kural, KuralVilakkam })
+        axios.put("https://thirukkural-api-dycp.onrender.com/updatethirukkural/"+id, { KuralEn, Kural, KuralVilakkam })
         .then(result => {
             console.log(result);
             navigate('/')

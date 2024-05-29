@@ -6,13 +6,13 @@ const Thirukkural = () => {
     const [thirukkurals, setThirukkurals] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001')
+        axios.get('https://thirukkural-api-hbta.onrender.com')
             .then(results => setThirukkurals(results.data))
             .catch(err => console.log(err))
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/deletethirukkural/' + id)
+        axios.delete('https://thirukkural-api-hbta.onrender.com/deletethirukkural/' + id)
             .then(results => {
                 console.log(results)
                 window.location.reload()
